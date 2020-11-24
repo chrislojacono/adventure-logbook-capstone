@@ -2,31 +2,23 @@ import React from 'react';
 import Geocode from 'react-geocode';
 import ApiKeys from '../helpers/ApiKeys';
 
-Geocode.setApiKey(ApiKeys.GoogleApiKey);
-Geocode.setLanguage('en');
-Geocode.setRegion('es');
+const GooglMapSearch = (area) => {
+  Geocode.setApiKey(ApiKeys.GoogleApiKey);
+  Geocode.setLanguage('en');
+  Geocode.setRegion('es');
+  Geocode.enableDebug();
+  Geocode.fromAddress(`${area}`).then(
+    (response) => {
+      const { lat, lng } = response.results[0].geometry.location;
+      console.warn(lat, lng);
+    },
+    (error) => {
+      console.error(error);
+    },
+  );
+};
 
-Geocode.enableDebug();
-
-Geocode.fromLatLng('48.8583701', '2.2922926').then(
-  (response) => {
-    const address = response.results[0].formatted_address;
-    console.warn(address);
-  },
-  (error) => {
-    console.error(error);
-  },
-);
-Geocode.fromAddress('Chattanooga').then(
-  (response) => {
-    const { lat, lng } = response.results[0].geometry.location;
-    console.warn(lat, lng);
-  },
-  (error) => {
-    console.error(error);
-  },
-);
-
+GooglMapSearch('Leavenworth');
 // Get latitude & longitude from address.
 
 class App extends React.Component {
