@@ -1,28 +1,23 @@
 import React from 'react';
-import Geocode from 'react-geocode';
-import ApiKeys from '../helpers/ApiKeys';
-
-const GooglMapSearch = (area) => {
-  Geocode.setApiKey(ApiKeys.GoogleApiKey);
-  Geocode.setLanguage('en');
-  Geocode.setRegion('es');
-  Geocode.enableDebug();
-  Geocode.fromAddress(`${area}`).then(
-    (response) => {
-      const { lat, lng } = response.results[0].geometry.location;
-      console.warn(lat, lng);
-    },
-    (error) => {
-      console.error(error);
-    },
-  );
-};
-
-GooglMapSearch('Leavenworth');
-// Get latitude & longitude from address.
+import GooglMapSearch from '../helpers/data/MapsApi';
 
 class App extends React.Component {
+  state = {
+    lattitude: '',
+    longitude: '',
+  }
+
+  searchTerm = (text) => (
+    GooglMapSearch(text).then((response) => {
+      this.setState({
+        lattitude: response.lat,
+        longitude: response.lng,
+      });
+    })
+  )
+
   render() {
+    this.searchTerm('Leavenworth');
     return (
       <div className="App">
         <h2>INSIDE APP COMPONENT</h2>
