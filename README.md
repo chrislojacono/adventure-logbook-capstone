@@ -4,3 +4,9 @@ This is my capstone project for my front-end development semester at The Nashvil
 ## ERD
 ![Screen Shot 2020-11-24 at 8 37 31 AM](https://user-images.githubusercontent.com/66916708/100108426-6142ae80-2e30-11eb-9033-be954e1441d4.png)
 
+## Loom Video
+[My Overview of the project planning](https://www.loom.com/share/0574a09eaec242f3821c712b15bbd349)
+
+## Wireframe
+[Figma Wireframe](https://www.figma.com/file/AKMpFD8OXHPdk5E5DRpWBj/Adventure-Logbook-Front-End-Capstone?node-id=12%3A4017)
+
