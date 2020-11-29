@@ -2,7 +2,7 @@
 This is my capstone project for my front-end development semester at The Nashville Software School. It will be a site to find and keep track of rock climbs a user would like to do in the future and a log of the ones completed in the past. The user will be able to save the climbs individually or tie them to a trip they plan on going on in the future
 
 ## ERD
-![Screen Shot 2020-11-24 at 8 37 31 AM](https://user-images.githubusercontent.com/66916708/100108426-6142ae80-2e30-11eb-9033-be954e1441d4.png)
+![Screen Shot 2020-11-28 at 9 41 04 PM](https://user-images.githubusercontent.com/66916708/100532794-79b12100-31c2-11eb-9774-f9ea24d3438c.png)
 
 ## Loom Video
 [My Overview of the project planning](https://www.loom.com/share/0574a09eaec242f3821c712b15bbd349)
