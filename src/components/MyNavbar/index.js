@@ -11,6 +11,7 @@ import {
   DropdownMenu,
   DropdownItem,
 } from 'reactstrap';
+import logo from '../../helpers/images/AdventureLogbookLogo.png';
 
 class MyNavbar extends React.Component {
   render() {
@@ -22,7 +23,9 @@ class MyNavbar extends React.Component {
     return (
       <div>
         <Navbar color='light' light expand='md'>
-          <NavbarBrand href='/'>Adventure Logbook</NavbarBrand>
+          <NavbarBrand href='/'>
+          The Adventure Logbook
+          </NavbarBrand>
           <Nav className='mr-auto' navbar>
             <NavItem>
               <Link className='nav-link' to='/'>
@@ -46,7 +49,7 @@ class MyNavbar extends React.Component {
                   src={user?.photoURL}
                   alt={user?.displayName}
                 />
-                <UncontrolledDropdown className="logout-dropdown">
+                <UncontrolledDropdown className='logout-dropdown'>
                   <DropdownToggle nav caret></DropdownToggle>
                   <DropdownMenu right>
                     <DropdownItem>{user?.displayName}</DropdownItem>
