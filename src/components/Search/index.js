@@ -4,6 +4,7 @@ import GoogleMapSearch from '../../helpers/data/MapsApi';
 import getRoutes from '../../helpers/data/MountainProjectApi';
 import ClimbCard from '../Cards/ClimbCard';
 import AppModal from '../AppModal';
+import logo from '../../helpers/images/AdventureLogbookLogo.png';
 
 export default class SearchBox extends Component {
   state = {
@@ -288,7 +289,7 @@ export default class SearchBox extends Component {
 
         {
           <div className='d-flex flex-wrap justify-content-center'>
-            {displayClimbs()}
+            {routes.length ? displayClimbs() : <img className='homePageLogo m-3'src={logo} alt='logo'/>}
           </div>
         }
       </>
