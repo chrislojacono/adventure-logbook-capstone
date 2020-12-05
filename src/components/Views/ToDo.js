@@ -41,7 +41,7 @@ export default class ToDoList extends Component {
         <>
         {showTheClimbs
           ? (<>
-            <h1 className="toDoTitle">To-Do List</h1>
+            <h1 className="toDoTitle m-2">To-Do List</h1>
             <div className="d-flex justify-content-center flex-wrap">
             {renderClimbs()}
             </div>
