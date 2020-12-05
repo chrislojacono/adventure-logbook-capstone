@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
@@ -7,6 +7,9 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
+import { addClimb } from '../../helpers/data/ClimbData';
+import ClimbAddedToToDo from '../../helpers/AlertMessage';
+import getUid from '../../helpers/data/AuthData';
 import stock1 from '../../helpers/images/stock1.jpg';
 import stock2 from '../../helpers/images/stock2.jpg';
 import stock3 from '../../helpers/images/stock3.jpg';
@@ -32,10 +35,39 @@ export default function ClimbCard({ routeData }) {
     return image;
   };
 
+  const [success, setSuccess] = useState(false);
+
+  const userKey = getUid();
+  const climbObject = {
+    id: routeData.id,
+    name: routeData.name,
+    imageUrl: routeData.imgMedium,
+    grade: routeData.rating,
+    stars: routeData.stars,
+    type: routeData.type,
+    userId: userKey,
+    url: routeData.url,
+    state: routeData.location[0],
+    region: routeData.location[1],
+    area: routeData.location[2],
+  };
+
+  const addEventClick = () => {
+    addClimb(climbObject).then(() => {
+      setSuccess({
+        success: true,
+      });
+      setTimeout(() => {
+        setSuccess(() => false);
+      }, 3000);
+    });
+  };
+
   const classes = useStyles();
 
   return (
     <Card className={`${classes.root} m-2 toDoCard`}>
+      {success ? <ClimbAddedToToDo routeData={routeData}/> : <></>}
       <CardActionArea>
         <CardMedia
           className={classes.media}
@@ -47,6 +79,9 @@ export default function ClimbCard({ routeData }) {
         <CardContent className='toDoBody'>
           <Typography gutterBottom variant='h5' component='h2'>
             {routeData.name}
+          </Typography>
+          <Typography variant='body1' component='h3'>
+            {routeData.rating}
           </Typography>
           <Typography variant='body2' color='primary' component='h6'>
             {routeData.stars}/5 Stars
@@ -87,6 +122,9 @@ export default function ClimbCard({ routeData }) {
         </CardContent>
       </CardActionArea>
       <CardActions className='buttonToDoContainer'>
+        <Button variant="contained" color="primary" onClick={() => {
+          addEventClick();
+        }}>Add Climb</Button>
         <a href={routeData.url} target='_blank' rel='noreferrer'>
           <Button size='small' color='primary'>
             Learn More
