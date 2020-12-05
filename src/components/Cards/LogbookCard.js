@@ -22,7 +22,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function LogbookCard2({ routeData, onUpdate }) {
+export default function LogbookCard({ routeData, onUpdate }) {
   const classes = useStyles();
 
   return (
@@ -32,12 +32,13 @@ export default function LogbookCard2({ routeData, onUpdate }) {
           <Avatar alt='Climb Avatar' src={routeData.imageUrl} />
         </ListItemAvatar>
         <ListItemText
+         primaryTypographyProps={{ variant: 'h5' }}
           primary={routeData.climbName}
           secondary={
             <React.Fragment>
               <Typography
                 component='span'
-                variant='body2'
+                variant='body1'
                 className={classes.inline}
                 color='textPrimary'
               >
