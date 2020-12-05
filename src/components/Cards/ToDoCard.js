@@ -8,8 +8,8 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import stock4 from '../../helpers/images/stock4.jpg';
-// import AppModal from '../AppModal';
-// import LogbookForm from '../Forms/LogbookForm';
+import AppModal from '../AppModal';
+import LogbookForm from '../Forms/LogbookForm';
 
 const useStyles = makeStyles({
   root: {
@@ -20,7 +20,7 @@ const useStyles = makeStyles({
   },
 });
 
-export default function ToDoCard2({ routeData, onUpdate }) {
+export default function ToDoCard({ routeData, onUpdate }) {
   const classes = useStyles();
 
   return (
@@ -35,7 +35,10 @@ export default function ToDoCard2({ routeData, onUpdate }) {
           <Typography gutterBottom variant='h5' component='h2'>
             {routeData.name}
           </Typography>
-          <Typography variant='body2' color='primary' component='h6'>
+          <Typography variant='h6' component='h3'>
+            {routeData.grade}
+          </Typography>
+          <Typography variant='body1' color='primary' component='h6'>
             {routeData.stars}/5 Stars
           </Typography>
           {routeData.area !== undefined ? (
@@ -64,13 +67,13 @@ export default function ToDoCard2({ routeData, onUpdate }) {
         </CardContent>
       </CardActionArea>
       <CardActions className='buttonToDoContainer'>
-        {/* <AppModal
+        <AppModal
           btnColor={'success'}
           title={'Logbook Entry'}
           buttonLabel={'Add to Logbook'}
         >
           <LogbookForm routeData={routeData} onUpdate={onUpdate} />
-        </AppModal> */}
+        </AppModal>
         <a href={routeData.url} target='_blank' rel='noreferrer'>
           <Button size='small' color='primary'>
             Learn More
