@@ -11,7 +11,6 @@ import {
   DropdownMenu,
   DropdownItem,
 } from 'reactstrap';
-import logo from '../../helpers/images/AdventureLogbookLogo.png';
 
 class MyNavbar extends React.Component {
   render() {
