@@ -7,7 +7,7 @@ import getUid from '../../helpers/data/AuthData';
 export default class ToDoList extends Component {
   state = {
     toDoClimbs: [],
-    success: '',
+    showTheClimbs: '',
   };
 
   componentDidMount() {
@@ -19,18 +19,17 @@ export default class ToDoList extends Component {
     getAllUserClimbs(userId).then((response) => {
       this.setState({
         toDoClimbs: response,
-        success: true,
+        showTheClimbs: true,
       });
     });
   }
 
   render() {
-    const { toDoClimbs, success } = this.state;
+    const { toDoClimbs, showTheClimbs } = this.state;
     const renderClimbs = () => toDoClimbs.map((climb) => <ToDoCard routeData={climb} key={climb.id} onUpdate={this.loadTheClimbs} />);
     return (
         <>
-
-        {success
+        {showTheClimbs
           ? (<>
             <h1 className="toDoTitle">To-Do List</h1>
             <div className="d-flex justify-content-center flex-wrap">

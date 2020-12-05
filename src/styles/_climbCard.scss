@@ -3,4 +3,13 @@
 }
 .noItemsInListMessage{
     color: white;
+    margin-top: 150px;
+    background-color: rgb(65, 62, 62);
+}
+.img-container{
+    height: 300px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    object-fit: contain;
 }
