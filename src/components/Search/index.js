@@ -149,7 +149,7 @@ export default class SearchBox extends Component {
                   required
                 >
                   <option>Choose...</option>
-                  <option>2 (for development/testing)</option>
+                  <option value='2'>2 (for development/testing)</option>
                   <option>10</option>
                   <option>15</option>
                   <option>20</option>
@@ -289,7 +289,11 @@ export default class SearchBox extends Component {
 
         {
           <div className='d-flex flex-wrap justify-content-center'>
-            {routes.length ? displayClimbs() : <img className='homePageLogo m-3'src={logo} alt='logo'/>}
+            {routes.length ? (
+              displayClimbs()
+            ) : (
+              <img className='homePageLogo m-3' src={logo} alt='logo' />
+            )}
           </div>
         }
       </>
