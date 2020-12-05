@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import firebase from 'firebase/app';
 import { Link } from 'react-router-dom';
 import {
+  Collapse,
+  NavbarToggler,
   Navbar,
   NavbarBrand,
   Nav,
@@ -12,19 +14,22 @@ import {
   DropdownItem,
 } from 'reactstrap';
 
-class MyNavbar extends React.Component {
-  render() {
-    const logMeOut = (e) => {
-      e.preventDefault();
-      firebase.auth().signOut();
-    };
-    const { user } = this.props;
-    return (
-      <div>
-        <Navbar color='light' light expand='md'>
-          <NavbarBrand href='/'>
-          The Adventure Logbook
-          </NavbarBrand>
+export default function MyNavbar({ user }) {
+  const logMeOut = (e) => {
+    e.preventDefault();
+    firebase.auth().signOut();
+  };
+
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggle = () => setIsOpen(!isOpen);
+
+  return (
+    <div>
+      <Navbar color='light' light expand='md'>
+        <NavbarBrand href='/'>The Adventure Logbook</NavbarBrand>
+        <NavbarToggler onClick={toggle} />
+        <Collapse isOpen={isOpen} navbar>
           <Nav className='mr-auto' navbar>
             <NavItem>
               <Link className='nav-link' to='/'>
@@ -43,11 +48,14 @@ class MyNavbar extends React.Component {
             </NavItem>
             {user && (
               <>
-                <img
+              <div className="userImgWrapper">
+              <img
                   className='userInfo'
                   src={user?.photoURL}
                   alt={user?.displayName}
                 />
+              </div>
+
                 <UncontrolledDropdown className='logout-dropdown'>
                   <DropdownToggle nav caret></DropdownToggle>
                   <DropdownMenu right>
@@ -65,10 +73,8 @@ class MyNavbar extends React.Component {
               </>
             )}
           </Nav>
-        </Navbar>
-      </div>
-    );
-  }
+        </Collapse>
+      </Navbar>
+    </div>
+  );
 }
-
-export default MyNavbar;
