@@ -18,6 +18,7 @@ export default class SearchBox extends Component {
     style: '',
     routes: [],
     success: false,
+    noRoutes: false,
   };
 
   searchTerm = (text) => (
@@ -42,6 +43,7 @@ export default class SearchBox extends Component {
       tester: '',
       routes: [],
       success: false,
+      noRoutes: false,
     });
   };
 
@@ -72,12 +74,18 @@ export default class SearchBox extends Component {
 
     getRoutes(lattitude, longitude, maxDist, maxResults, minDiff, maxDiff).then(
       (response) => {
-        response.data.routes.forEach((item) => {
-          this.setState({
-            routes: this.state.routes.concat(item),
-            success: true,
+        if (response.data.routes.length > 1) {
+          response.data.routes.forEach((item) => {
+            this.setState({
+              routes: this.state.routes.concat(item),
+              success: true,
+            });
           });
-        });
+        } else {
+          this.setState({
+            noRoutes: true,
+          });
+        }
       },
     );
   };
@@ -88,6 +96,7 @@ export default class SearchBox extends Component {
       success,
       lattitude,
       style,
+      noRoutes,
     } = this.state;
     const displayClimbs = () => routes.map((route) => <ClimbCard routeData={route} key={route.id} />);
 
@@ -101,6 +110,7 @@ export default class SearchBox extends Component {
           buttonLabel={'Find A Climb!'}
         >
           {success && <Alert variant={'success'}>Routes found!</Alert>}
+          {noRoutes && <Alert variant={'danger'} color="danger">No routes found in this area!</Alert>}
           {lattitude === '' ? (
             <Form onSubmit={this.handleSubmit}>
               <label>Where are you headed?</label>
