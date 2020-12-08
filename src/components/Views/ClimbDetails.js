@@ -12,7 +12,6 @@ export default class ClimbDetails extends React.Component {
 
   componentDidMount() {
     getAllLogsOfSpecificClimb(this.props.routeData?.id).then((response) => {
-      console.warn(response);
       this.setState({
         userComments: response,
       });
