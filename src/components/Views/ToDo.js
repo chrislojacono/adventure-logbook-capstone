@@ -32,7 +32,7 @@ export default class ToDoList extends Component {
 
   render() {
     const { toDoClimbs, showTheClimbs } = this.state;
-    const renderClimbs = () => toDoClimbs.map((climb) => <ToDoCard routeData={climb} key={climb.id} onUpdate={this.loadTheClimbs} deleteCard={this.deleteCard}/>);
+    const renderClimbs = () => toDoClimbs.map((climb) => <ToDoCard routeData={climb} key={climb.id} onUpdate={this.loadTheClimbs} deleteCard={this.deleteCard} user={this.props.user} />);
     const renderNoClimbs = () => (
       <div>
       <h1 className='noItemsInListMessage'>Find some climbs and add them to your To-Do List <Link to='/'>Here!</Link></h1>

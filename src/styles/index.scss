@@ -1,11 +1,13 @@
 @import '~@fortawesome/fontawesome-free/css/all.min.css';
 @import '~bootstrap/dist/css/bootstrap.min.css';
+
 @import url('https://fonts.googleapis.com/css2?family=Castoro&display=swap');
 @import 'variables';
 @import '_app.scss';
 @import '_home.scss';
 @import '_climbCard.scss';
 @import '_logbook.scss';
+
 
 body {
   font-family: 'Castoro', serif;

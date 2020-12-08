@@ -32,10 +32,17 @@ const deleteLog = (firebaseKey) => new Promise((resolve, reject) => {
     .then(resolve).catch((error) => reject(error));
 });
 
+const getAllLogsOfSpecificClimb = (climbId) => new Promise((resolve, reject) => {
+  axios.get(`${baseUrl}/logbook.json?orderBy="id"&equalTo=${climbId}`).then((response) => {
+    resolve(Object.values(response.data));
+  }).catch((error) => reject(error));
+});
+
 export {
   getAllUserLogs,
   getSingleLogbookEntry,
   addLogbookEntry,
   updateLogbook,
   deleteLog,
+  getAllLogsOfSpecificClimb,
 };

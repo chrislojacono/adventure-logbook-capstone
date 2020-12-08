@@ -14,6 +14,9 @@ export default class LogbookForm extends Component {
     name: this.props.routeData?.name || this.props.logbookData?.name,
     grade: this.props.routeData?.grade || this.props.logbookData?.grade,
     imageUrl: this.props.routeData?.imageUrl || this.props.logbookData?.imageUrl,
+    userImage: this.props.user?.photoURL,
+    displayName: this.props.user?.displayName,
+
   };
 
   componentDidMount() {
