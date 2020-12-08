@@ -25,7 +25,7 @@ export default function ToDoCard({ routeData, onUpdate, deleteCard }) {
   const classes = useStyles();
 
   return (
-    <Card className={`${classes.root} m-2 toDoCard`}>
+    <Card className={`${classes.root} m-2 toDoCard d-flex flex-column`}>
       <CardActionArea>
         <CardMedia
           className={classes.media}
@@ -67,7 +67,7 @@ export default function ToDoCard({ routeData, onUpdate, deleteCard }) {
           )}
         </CardContent>
       </CardActionArea>
-      <CardActions className='buttonToDoContainer'>
+      <CardActions className='buttonToDoContainer mt-auto'>
         <AppModal
           btnColor={'success'}
           title={'Logbook Entry'}

@@ -66,7 +66,7 @@ export default function ClimbCard({ routeData }) {
   const classes = useStyles();
 
   return (
-    <Card className={`${classes.root} m-2 toDoCard`}>
+    <Card className={`${classes.root} m-2 toDoCard d-flex flex-column`}>
       {success ? <ClimbAddedToToDo routeData={routeData}/> : <></>}
       <CardActionArea>
         <CardMedia
@@ -121,7 +121,7 @@ export default function ClimbCard({ routeData }) {
           )}
         </CardContent>
       </CardActionArea>
-      <CardActions className='buttonToDoContainer'>
+      <CardActions className='buttonToDoContainer mt-auto'>
         <Button variant="contained" color="primary" onClick={() => {
           addEventClick();
         }}>Add Climb</Button>

@@ -85,6 +85,11 @@ export default class SearchBox extends Component {
           this.setState({
             noRoutes: true,
           });
+          setTimeout(() => {
+            this.setState({
+              noRoutes: false,
+            });
+          }, 3000);
         }
       },
     );
