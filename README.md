@@ -1,4 +1,5 @@
 # The Adventure Logbook
+![AdventureLogbookLogo](https://user-images.githubusercontent.com/66916708/101431299-35153c00-38cc-11eb-9dac-6155df5d3bd9.png)
 This is my capstone project for my front-end development semester at The Nashville Software School. It will be a site to find and keep track of rock climbs a user would like to do in the future and a log of the ones completed in the past. The user will be able to save the climbs individually or tie them to a trip they plan on going on in the future
 
 ## Deployed Site
