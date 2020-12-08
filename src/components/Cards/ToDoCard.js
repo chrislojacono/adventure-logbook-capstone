@@ -8,7 +8,13 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import DeleteTwoToneIcon from '@material-ui/icons/DeleteTwoTone';
+import stock1 from '../../helpers/images/stock1.jpg';
+import stock2 from '../../helpers/images/stock2.jpg';
+import stock3 from '../../helpers/images/stock3.jpg';
 import stock4 from '../../helpers/images/stock4.jpg';
+import stock5 from '../../helpers/images/stock5.jpg';
+import stock6 from '../../helpers/images/stock6.jpg';
+import stock7 from '../../helpers/images/stock7.jpg';
 import AppModal from '../AppModal';
 import LogbookForm from '../Forms/LogbookForm';
 import ClimbDetails from '../Views/ClimbDetails';
@@ -29,13 +35,19 @@ export default function ToDoCard({
   user,
 }) {
   const classes = useStyles();
+  const imageArray = [stock1, stock2, stock3, stock4, stock5, stock6, stock7];
+
+  const getRandomImage = () => {
+    const image = imageArray[Math.floor(Math.random() * imageArray.length)];
+    return image;
+  };
 
   return (
     <Card className={`${classes.root} m-2 toDoCard d-flex flex-column`}>
       <CardActionArea>
         <CardMedia
           className={classes.media}
-          image={routeData.imageUrl === '' ? stock4 : routeData.imageUrl}
+          image={routeData.imageUrl === '' ? getRandomImage() : routeData.imageUrl}
           title='Contemplative Reptile'
         />
         <CardContent className='toDoBody'>
