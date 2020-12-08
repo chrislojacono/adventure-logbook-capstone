@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './styles/index.scss';
+import 'react-open-weather/lib/css/ReactWeather.css';
 import App from './components/App';
 import reportWebVitals from './reportWebVitals';
 

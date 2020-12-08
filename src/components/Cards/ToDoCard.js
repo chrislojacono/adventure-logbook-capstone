@@ -11,6 +11,7 @@ import DeleteTwoToneIcon from '@material-ui/icons/DeleteTwoTone';
 import stock4 from '../../helpers/images/stock4.jpg';
 import AppModal from '../AppModal';
 import LogbookForm from '../Forms/LogbookForm';
+import ClimbDetails from '../Views/ClimbDetails';
 
 const useStyles = makeStyles({
   root: {
@@ -80,11 +81,22 @@ export default function ToDoCard({ routeData, onUpdate, deleteCard }) {
             Learn More
           </Button>
         </a>
-        <Button size='small' onClick={() => {
-          deleteCard(routeData.firebaseKey);
-        }}>
-        <DeleteTwoToneIcon />
+        <Button
+          size='small'
+          onClick={() => {
+            deleteCard(routeData.firebaseKey);
+          }}
+        >
+          <DeleteTwoToneIcon />
         </Button>
+        <AppModal
+          btnColor={'outline-info'}
+          title={'Weather'}
+          buttonLabel={'Weather'}
+          className2={'btn btn-md'}
+        >
+          <ClimbDetails routeData={routeData}/>
+        </AppModal>
       </CardActions>
     </Card>
   );
