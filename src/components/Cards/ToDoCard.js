@@ -7,6 +7,7 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
+import DeleteTwoToneIcon from '@material-ui/icons/DeleteTwoTone';
 import stock4 from '../../helpers/images/stock4.jpg';
 import AppModal from '../AppModal';
 import LogbookForm from '../Forms/LogbookForm';
@@ -20,7 +21,7 @@ const useStyles = makeStyles({
   },
 });
 
-export default function ToDoCard({ routeData, onUpdate }) {
+export default function ToDoCard({ routeData, onUpdate, deleteCard }) {
   const classes = useStyles();
 
   return (
@@ -79,6 +80,11 @@ export default function ToDoCard({ routeData, onUpdate }) {
             Learn More
           </Button>
         </a>
+        <Button size='small' onClick={() => {
+          deleteCard(routeData.firebaseKey);
+        }}>
+        <DeleteTwoToneIcon />
+        </Button>
       </CardActions>
     </Card>
   );

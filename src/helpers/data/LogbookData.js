@@ -27,9 +27,15 @@ const updateLogbook = (object) => new Promise((resolve, reject) => {
     .then(resolve).catch((error) => reject(error));
 });
 
+const deleteLog = (firebaseKey) => new Promise((resolve, reject) => {
+  axios.delete(`${baseUrl}/logbook/${firebaseKey}.json`)
+    .then(resolve).catch((error) => reject(error));
+});
+
 export {
   getAllUserLogs,
   getSingleLogbookEntry,
   addLogbookEntry,
   updateLogbook,
+  deleteLog,
 };

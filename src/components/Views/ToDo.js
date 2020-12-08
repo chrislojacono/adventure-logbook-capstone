@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import { getAllUserClimbs } from '../../helpers/data/ClimbData';
+import { getAllUserClimbs, deleteToDoClimb } from '../../helpers/data/ClimbData';
 import ToDoCard from '../Cards/ToDoCard';
 import getUid from '../../helpers/data/AuthData';
 
@@ -24,9 +24,15 @@ export default class ToDoList extends Component {
     });
   }
 
+  deleteCard = (firebaseKey) => {
+    deleteToDoClimb(firebaseKey).then(() => {
+      this.loadTheClimbs();
+    });
+  }
+
   render() {
     const { toDoClimbs, showTheClimbs } = this.state;
-    const renderClimbs = () => toDoClimbs.map((climb) => <ToDoCard routeData={climb} key={climb.id} onUpdate={this.loadTheClimbs} />);
+    const renderClimbs = () => toDoClimbs.map((climb) => <ToDoCard routeData={climb} key={climb.id} onUpdate={this.loadTheClimbs} deleteCard={this.deleteCard}/>);
     const renderNoClimbs = () => (
       <div>
       <h1 className='noItemsInListMessage'>Find some climbs and add them to your To-Do List <Link to='/'>Here!</Link></h1>
