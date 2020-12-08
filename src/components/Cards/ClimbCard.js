@@ -125,7 +125,7 @@ export default function ClimbCard({ routeData }) {
           )}
         </CardContent>
       </CardActionArea>
-      <CardActions className='buttonToDoContainer mt-auto'>
+      <CardActions className='buttonToDoContainer d-flex mt-auto justify-content-center'>
         <Button variant="contained" color="primary" onClick={() => {
           addEventClick();
         }}>Add Climb</Button>
