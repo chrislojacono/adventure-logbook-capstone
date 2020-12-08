@@ -85,6 +85,11 @@ export default class SearchBox extends Component {
           this.setState({
             noRoutes: true,
           });
+          setTimeout(() => {
+            this.setState({
+              noRoutes: false,
+            });
+          }, 3000);
         }
       },
     );
@@ -110,7 +115,7 @@ export default class SearchBox extends Component {
           buttonLabel={'Find A Climb!'}
         >
           {success && <Alert variant={'success'}>Routes found!</Alert>}
-          {noRoutes && <Alert variant={'danger'} color="danger">No routes found in this area!</Alert>}
+          {noRoutes && <Alert variant={'danger'} color="danger">No routes found within {this.state.maxDist} of {this.state.searchInput} try somewhere else!</Alert>}
           {lattitude === '' ? (
             <Form onSubmit={this.handleSubmit}>
               <label>Where are you headed?</label>

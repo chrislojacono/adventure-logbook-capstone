@@ -9,10 +9,10 @@ export default class LogbookForm extends Component {
     userId: this.props.logbookData?.userId || '',
     beta: this.props.logbookData?.beta || '',
     userRating: this.props.logbookData?.userRating || '',
-    climbId: this.props.routeData?.id || this.props.logbookData?.climbId,
+    id: this.props.routeData?.id || this.props.logbookData?.id,
     url: this.props.routeData?.url || this.props.logbookData?.url,
-    climbName: this.props.routeData?.name || this.props.logbookData?.climbName,
-    climbGrade: this.props.routeData?.grade || this.props.logbookData?.climbGrade,
+    name: this.props.routeData?.name || this.props.logbookData?.name,
+    grade: this.props.routeData?.grade || this.props.logbookData?.grade,
     imageUrl: this.props.routeData?.imageUrl || this.props.logbookData?.imageUrl,
   };
 
@@ -69,7 +69,7 @@ export default class LogbookForm extends Component {
               value={this.state.beta}
               onChange={this.handleChange}
               placeholder='Any comments or beta?'
-              className='form-control form-control-lg m-2'
+              className='form-control form-control-lg mb-2 mt-1'
               required
             />
           </div>
@@ -77,10 +77,9 @@ export default class LogbookForm extends Component {
           <select
             as='select'
             name='userRating'
-            className="form-control form-control-lg m-2"
-            value={this.state.name}
+            className="form-control form-control-lg mb-2 mt-1"
+            value={this.state.userRating}
             onChange={this.handleChange}
-            defaultValue={this.state.userRating}
            required>
             <option>Rate the Climb!!</option>
             <option value='1'>1 star</option>
@@ -90,7 +89,6 @@ export default class LogbookForm extends Component {
             <option value='5'>5 stars</option>
            </select>
         </div>
-
           <button
             ref={(btn) => {
               this.btn = btn;
