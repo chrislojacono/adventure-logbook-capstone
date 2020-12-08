@@ -307,7 +307,9 @@ export default class SearchBox extends Component {
             {routes.length ? (
               displayClimbs()
             ) : (
+              <div>
               <img className='homePageLogo m-3' src={logo} alt='logo' />
+              </div>
             )}
           </div>
         }
