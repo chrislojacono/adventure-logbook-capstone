@@ -1,6 +1,7 @@
 const ApiKeys = {
   GoogleApiKey: process.env.REACT_APP_GoogleAPIKey,
   MountainProjectKey: process.env.REACT_APP_MountainProjectKey,
+  OpenWeatherKey: process.env.REACT_APP_OpenWeatherkey,
 };
 
 const firebaseConfig = {
