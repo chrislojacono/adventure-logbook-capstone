@@ -50,8 +50,8 @@ export default function LogbookCard({ routeData, onUpdate, deleteCard }) {
               <Stars
                 stars={routeData.userRating}
                 outOf={5}
-                full={'#d4af37'}
-                empty={'#E1F1FF'}
+                full={'#FFDF00'}
+                empty={'#FFFFFF'}
                 stroke={'#369'}
               />
               {routeData.beta}

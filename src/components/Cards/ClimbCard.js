@@ -9,6 +9,8 @@ import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import { addClimb } from '../../helpers/data/ClimbData';
 import ClimbAddedToToDo from '../../helpers/AlertMessage';
+import AppModal from '../AppModal';
+import ClimbDetails from '../Views/ClimbDetails';
 import getUid from '../../helpers/data/AuthData';
 import stock1 from '../../helpers/images/stock1.jpg';
 import stock2 from '../../helpers/images/stock2.jpg';
@@ -127,11 +129,14 @@ export default function ClimbCard({ routeData }) {
         <Button variant="contained" color="primary" onClick={() => {
           addEventClick();
         }}>Add Climb</Button>
-        <a href={routeData.url} target='_blank' rel='noreferrer'>
-          <Button size='small' color='primary'>
-            Learn More
-          </Button>
-        </a>
+        <AppModal
+          btnColor={'outline-info'}
+          title={'Weather/Info'}
+          buttonLabel={'Details'}
+          className2={'btn btn-md'}
+        >
+          <ClimbDetails routeData={routeData}/>
+        </AppModal>
       </CardActions>
     </Card>
   );

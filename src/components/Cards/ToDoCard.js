@@ -22,7 +22,12 @@ const useStyles = makeStyles({
   },
 });
 
-export default function ToDoCard({ routeData, onUpdate, deleteCard }) {
+export default function ToDoCard({
+  routeData,
+  onUpdate,
+  deleteCard,
+  user,
+}) {
   const classes = useStyles();
 
   return (
@@ -70,17 +75,20 @@ export default function ToDoCard({ routeData, onUpdate, deleteCard }) {
       </CardActionArea>
       <CardActions className='buttonToDoContainer mt-auto'>
         <AppModal
-          btnColor={'success'}
+          btnColor={'outline-success'}
           title={'Logbook Entry'}
           buttonLabel={'Add to Logbook'}
         >
-          <LogbookForm routeData={routeData} onUpdate={onUpdate} />
+          <LogbookForm routeData={routeData} onUpdate={onUpdate} user={user}/>
         </AppModal>
-        <a href={routeData.url} target='_blank' rel='noreferrer'>
-          <Button size='small' color='primary'>
-            Learn More
-          </Button>
-        </a>
+        <AppModal
+          btnColor={'outline-info'}
+          title={'Weather/Info'}
+          buttonLabel={'Details'}
+          className2={'btn btn-md'}
+        >
+          <ClimbDetails routeData={routeData}/>
+        </AppModal>
         <Button
           size='small'
           onClick={() => {
@@ -89,14 +97,6 @@ export default function ToDoCard({ routeData, onUpdate, deleteCard }) {
         >
           <DeleteTwoToneIcon />
         </Button>
-        <AppModal
-          btnColor={'outline-info'}
-          title={'Weather'}
-          buttonLabel={'Weather'}
-          className2={'btn btn-md'}
-        >
-          <ClimbDetails routeData={routeData}/>
-        </AppModal>
       </CardActions>
     </Card>
   );
