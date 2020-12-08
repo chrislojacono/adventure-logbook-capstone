@@ -32,8 +32,8 @@ export default function LogbookCard({ routeData, onUpdate }) {
           <Avatar alt='Climb Avatar' src={routeData.imageUrl} />
         </ListItemAvatar>
         <ListItemText
-         primaryTypographyProps={{ variant: 'h5' }}
-          primary={routeData.climbName}
+          primaryTypographyProps={{ variant: 'h5' }}
+          primary={routeData.name}
           secondary={
             <React.Fragment>
               <Typography
@@ -42,22 +42,15 @@ export default function LogbookCard({ routeData, onUpdate }) {
                 className={classes.inline}
                 color='textPrimary'
               >
-                {routeData.climbGrade}
+                {routeData.grade}
               </Typography>
-              <Typography
-                component='span'
-                variant='body2'
-                className={classes.inline}
-                color='textPrimary'
-              >
-                <Stars
-                  stars={routeData.userRating}
-                  outOf={5}
-                  full={'#d4af37'}
-                  empty={'#E1F1FF'}
-                  stroke={'#369'}
-                />
-              </Typography>
+              <Stars
+                stars={routeData.userRating}
+                outOf={5}
+                full={'#d4af37'}
+                empty={'#E1F1FF'}
+                stroke={'#369'}
+              />
               {routeData.beta}
             </React.Fragment>
           }

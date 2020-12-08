@@ -41,7 +41,7 @@ export default class Logbook extends Component {
       {showTheClimbs
         ? (<>
           <h1 className="toDoTitle m-2">Logbook</h1>
-          <div className="d-flex justify-content-center flex-wrap">
+          <div className="d-flex justify-content-center flex-column-reverse align-items-center">
           {renderClimbs()}
           </div>
           </>
