@@ -50,6 +50,8 @@ export default function ClimbCard({ routeData }) {
     state: routeData.location[0],
     region: routeData.location[1],
     area: routeData.location[2],
+    longitude: routeData.longitude,
+    latitude: routeData.latitude,
   };
 
   const addEventClick = () => {
