@@ -8,6 +8,7 @@ import {
 } from 'react-google-maps';
 import { getAllUserClimbs } from './ClimbData';
 import getUid from './AuthData';
+import ToDoCard from '../../components/Cards/ToDoCard';
 
 class Map extends React.Component {
   state = {
@@ -52,7 +53,7 @@ class Map extends React.Component {
               selectedClimb: null,
             });
           }}>
-            <h1>{selectedClimb.name}</h1>
+            <ToDoCard routeData={selectedClimb}/>
           </InfoWindow>
         )}
       </GoogleMap>
