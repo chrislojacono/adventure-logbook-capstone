@@ -28,6 +28,7 @@
     "react-geocode": "^0.2.2",
     "react-google-maps": "^9.4.5",
     "react-open-weather": "^0.6.7",
+    "react-ratings-declarative": "^3.4.1",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.0",
     "reactstrap": "^8.7.1",
