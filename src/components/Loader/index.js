@@ -1,19 +1,10 @@
-const Loader = () => (
-  <div className='mt-5'>
-    <div className='spinner-grow text-primary' role='status'>
-      <span className='sr-only'>Loading...</span>
-    </div>
-    <div className='spinner-grow text-secondary' role='status'>
-      <span className='sr-only'>Loading...</span>
-    </div>
-    <div className='spinner-grow text-success' role='status'>
-      <span className='sr-only'>Loading...</span>
-    </div>
-    <div className='spinner-grow text-danger' role='status'>
-      <span className='sr-only'>Loading...</span>
-    </div>
-    <div>Loading...</div>
-  </div>
-);
+import React from 'react';
+import { RingSpinner } from 'react-spinners-kit';
 
-export default Loader;
+export default function Loader() {
+  return (
+  <div className="d-flex justify-content-center align-items-center mt-5">
+    <RingSpinner size={400} color="#1FA5A3"/>;
+  </div>
+  );
+}

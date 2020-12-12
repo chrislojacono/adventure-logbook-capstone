@@ -167,10 +167,13 @@ export default class SearchBox extends Component {
                   required
                 >
                   <option>Choose...</option>
-                  <option value='2'>2 (for development/testing)</option>
+                  <option>5</option>
                   <option>10</option>
                   <option>15</option>
                   <option>20</option>
+                  <option>30</option>
+                  <option>40</option>
+                  <option>50</option>
                 </select>
               </div>
               <div>
