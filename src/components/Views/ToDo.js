@@ -6,7 +6,6 @@ import getUid from '../../helpers/data/AuthData';
 import WrappedMap from '../../helpers/data/GoogleMaps3';
 import { ApiKeys } from '../../helpers/ApiKeys';
 
-
 export default class ToDoList extends Component {
   state = {
     toDoClimbs: [],
