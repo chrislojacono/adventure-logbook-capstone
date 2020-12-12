@@ -81,9 +81,6 @@ export default class SearchBox extends Component {
               success: true,
             });
           });
-          setTimeout(() => {
-            this.props.toggle();
-          }, 3000);
         } else {
           this.setState({
             noRoutes: true,

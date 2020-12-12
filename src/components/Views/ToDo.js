@@ -47,16 +47,16 @@ export default class ToDoList extends Component {
     };
     return (
         <>
-        <div style={{ width: '40vw', height: '40vh' }} className='m-auto'>
-        <WrappedMap googleMapURL={`https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=${ApiKeys.GoogleApiKey}`}
-        loadingElement={<div style={{ height: '100%' }}/>}
-        containerElement={<div style={{ height: '100%' }}/>}
-        mapElement={<div style={{ height: '100%' }}/>}>
-        </WrappedMap>
-        </div>
         {showTheClimbs
           ? (<>
             <h1 className="toDoTitle m-2">To-Do List</h1>
+            <div className='mapWrapper m-auto'>
+            <WrappedMap googleMapURL={`https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=${ApiKeys.GoogleApiKey}`}
+            loadingElement={<div style={{ height: '100%' }}/>}
+            containerElement={<div style={{ height: '100%' }}/>}
+            mapElement={<div style={{ height: '100%' }}/>}>
+            </WrappedMap>
+        </div>
             <div className="d-flex justify-content-center flex-wrap">
             {renderClimbs()}
             </div>

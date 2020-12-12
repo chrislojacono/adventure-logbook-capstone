@@ -32,9 +32,10 @@ class Map extends React.Component {
   render() {
     const { toDoClimbs, selectedClimb } = this.state;
     return (
+
       <GoogleMap
         defaultZoom={4}
-        defaultCenter={{ lat: 36.1627, lng: -86.7816 }}
+        defaultCenter={{ lat: 39.809879, lng: -98.556732 }}
       >
         {toDoClimbs.map((climb) => (
           <Marker
@@ -57,6 +58,7 @@ class Map extends React.Component {
           </InfoWindow>
         )}
       </GoogleMap>
+
     );
   }
 }
