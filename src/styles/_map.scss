@@ -1,0 +1,13 @@
+.mapWrapper{
+    width: 70vw;
+    height: 60vh;
+    margin: 10px;
+}
+
+@media screen and (max-width: 400px){
+.mapWrapper{
+    width: 90vw;
+    height: 60vh;
+}
+
+}
