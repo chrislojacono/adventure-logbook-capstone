@@ -27,6 +27,7 @@
     "react-open-weather": "^0.6.7",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.0",
+    "react-spinners-kit": "^1.9.1",
     "reactstrap": "^8.7.1",
     "simple-rating-stars": "^1.6.0",
     "web-vitals": "^0.2.4"
