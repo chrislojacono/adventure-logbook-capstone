@@ -39,11 +39,17 @@ export default class LogbookForm extends Component {
           this.props.onUpdate?.();
         });
         this.setState({ success: true });
+        setTimeout(() => {
+          this.props.toggle();
+        }, 3000);
       });
     } else {
       updateLogbook(this.state).then(() => {
         this.props.onUpdate?.();
         this.setState({ success: true });
+        setTimeout(() => {
+          this.props.toggle();
+        }, 3000);
       });
     }
   };

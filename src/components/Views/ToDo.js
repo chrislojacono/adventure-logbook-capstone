@@ -3,6 +3,9 @@ import { Link } from 'react-router-dom';
 import { getAllUserClimbs, deleteToDoClimb } from '../../helpers/data/ClimbData';
 import ToDoCard from '../Cards/ToDoCard';
 import getUid from '../../helpers/data/AuthData';
+import GoogleMapsWrapper from '../../helpers/GoogleMapsDynamic';
+import MyMarker from '../Cards/myMarker';
+// import { MapContainer } from '../../helpers/GoogleMaps2';
 
 export default class ToDoList extends Component {
   state = {
@@ -45,6 +48,11 @@ export default class ToDoList extends Component {
     };
     return (
         <>
+        <GoogleMapsWrapper>
+          {
+          this.state.toDoClimbs.map((climb) => <MyMarker key={climb.id} routeData={climb} lat={climb.latitude} lng={climb.longitude}/>)
+          }
+        </GoogleMapsWrapper>
         {showTheClimbs
           ? (<>
             <h1 className="toDoTitle m-2">To-Do List</h1>
