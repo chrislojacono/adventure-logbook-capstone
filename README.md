@@ -29,6 +29,9 @@ Rock Climbing is my passion, outside of web development, so I took this oppurtun
 My Cards that display post-search using hooks and material UI
 ```
 export default function ClimbCard({ routeData }) {
+
+// If the image doesnt have an image from the API, it will be given a stock photoi to use
+
   const imageArray = [stock1, stock2, stock3, stock4, stock5, stock6, stock7];
 
   const getRandomImage = () => {
