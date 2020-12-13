@@ -37,7 +37,13 @@ export default function ClimbCard({ routeData }) {
     return image;
   };
 
+  const getRandomValue = () => (Math.random() * (0.0090 - 0.0010) + 0.0010).toFixed(4);
+
   const [success, setSuccess] = useState(false);
+
+  // Slightly adjusting the longitude and latitude here so the markers dont pile on top of each other
+  const latitudeValue = +parseFloat(routeData.latitude) + +getRandomValue(0.001, 0.009);
+  const longitudeValue = +parseFloat(routeData.longitude) + +getRandomValue(0.001, 0.009);
 
   const userKey = getUid();
   const climbObject = {
@@ -52,8 +58,8 @@ export default function ClimbCard({ routeData }) {
     state: routeData.location[0],
     region: routeData.location[1],
     area: routeData.location[2],
-    longitude: routeData.longitude,
-    latitude: routeData.latitude,
+    longitude: longitudeValue,
+    latitude: latitudeValue,
   };
 
   const addEventClick = () => {
