@@ -1,6 +1,3 @@
-.login{
-    margin-top: 250px;
-}
 
 .userInfo{
     height: 35px;
@@ -30,6 +27,34 @@
 .homePageLogo{
     width: 60%;
 }
+
+.loginLogo{
+    position: relative;
+    width: 80vw;
+    height: 80vh;
+    background-size: contain;
+    background-position: center;
+    background-repeat:no-repeat;
+    object-fit: cover;
+    margin: 40px auto;
+}
+
+.login{
+    margin-top: 250px;
+    width: 20%; 
+    position: absolute;
+    background-color: white;
+    bottom: 5%;
+    left: 40%;
+}
+
+.login:hover{
+    background-color: teal;
+}
+.loginButtonImg{
+    width: 100%;
+}
+
 @media screen and (max-width: 400px){
     .login{
         width: 100%;
@@ -53,5 +78,26 @@
         width:90%;
     
     }
+    .loginLogo{
+        position: relative;
+        width: 80vw;
+        height: 90vh;
+        background-size: contain;
+        background-position: center;
+        background-repeat:no-repeat;
+        object-fit: cover;
+        margin-top: 0;
+
+    }
+    
+    .login{
+        margin-top: 250px;
+        width: 40%; 
+        background-color: white;
+        position: absolute;
+        bottom: 30%;
+        left: 30%;
+    }
 
 }
+
