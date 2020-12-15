@@ -84,7 +84,7 @@ export default class LogbookForm extends Component {
               required
             />
           </div>
-        <div className='m-3'>
+        <div className='mt-3 mb-3 d-flex w-100 justify-content-center'>
         <Ratings
             rating={parseInt(this.state.userRating, 10)}
             widgetRatedColors='#F7F134'

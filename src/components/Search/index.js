@@ -5,6 +5,7 @@ import getRoutes from '../../helpers/data/MountainProjectApi';
 import ClimbCard from '../Cards/ClimbCard';
 import AppModal from '../AppModal';
 import logo from '../../helpers/images/AdventureLogbookLogo.png';
+import Pagination from '../Pagination';
 
 export default class SearchBox extends Component {
   state = {
@@ -14,11 +15,14 @@ export default class SearchBox extends Component {
     maxDiff: '',
     minDiff: '',
     maxDist: '',
-    maxResults: '',
+    maxResults: 10,
     style: '',
     routes: [],
     success: false,
     noRoutes: false,
+    loading: false,
+    routesPerPage: 10,
+    currentPage: 1,
   };
 
   searchTerm = (text) => (
@@ -103,7 +107,21 @@ export default class SearchBox extends Component {
       style,
       noRoutes,
     } = this.state;
-    const displayClimbs = () => routes.map((route) => <ClimbCard routeData={route} key={route.id} />);
+
+    const indexOfLastRoute = this.state.currentPage * this.state.routesPerPage;
+
+    const indexOfFirstRoute = indexOfLastRoute - this.state.routesPerPage;
+
+    const currentRoutes = this.state.routes.slice(indexOfFirstRoute, indexOfLastRoute);
+
+    // Change Page
+    const paginate = (pageNumber) => {
+      this.setState({
+        currentPage: pageNumber,
+      });
+    };
+
+    const displayClimbs = () => currentRoutes.map((route) => <ClimbCard routeData={route} key={route.id} />);
 
     return (
       <>
@@ -164,9 +182,7 @@ export default class SearchBox extends Component {
                   required
                 >
                   <option>Choose...</option>
-                  <option>5</option>
                   <option>10</option>
-                  <option>15</option>
                   <option>20</option>
                   <option>30</option>
                   <option>40</option>
@@ -175,7 +191,6 @@ export default class SearchBox extends Component {
               </div>
               <div>
                 <label>Max Distance Away</label>
-                {/* <input type="range" min="0" max="250" value={this.state.maxDist} name='maxDist' onChange={(e) => { this.handleChange(e); }}/> */}
                 <select
                   className='form-control form-control-lg m-1'
                   as='select'
@@ -306,6 +321,7 @@ export default class SearchBox extends Component {
         </AppModal>
 
         {
+          <>
           <div className='d-flex flex-wrap justify-content-center'>
             {routes.length ? (
               displayClimbs()
@@ -315,6 +331,10 @@ export default class SearchBox extends Component {
               </div>
             )}
           </div>
+          <div className='d-flex justify-content-center'>
+          <Pagination paginate={paginate} routesPerPage={this.state.routesPerPage} totalRoutes={this.state.routes.length}/>
+          </div>
+        </>
         }
       </>
     );
