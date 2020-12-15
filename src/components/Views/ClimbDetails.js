@@ -19,7 +19,7 @@ export default function ClimbDetails({ routeData }) {
     lat: routeData.latitude,
     lon: routeData.longitude,
     lang: 'en',
-    unit: 'imperial', // values are (metric, standard, imperial)
+    unit: 'imperial',
   });
   return (
     <>
@@ -35,7 +35,7 @@ export default function ClimbDetails({ routeData }) {
           <CommentCard data={comment} key={comment.firebaseKey} />
         )) : (<> </>)}
       </div>
-      <div className='m-2'>
+      <div className='m-3'>
         <a href={routeData.url} target='_blank' rel='noreferrer'>
           <Button variant='contained' color='primary'>
             More Info/ Website

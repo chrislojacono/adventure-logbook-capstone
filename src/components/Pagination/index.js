@@ -9,11 +9,13 @@ export default function Pagination({ routesPerPage, totalRoutes, paginate }) {
   }
 
   return (
-    <div>
-      <ul className='pagination'>
+    <div className=''>
+      <ul className='pagination-lg m-3 d-flex'>
         {pageNumbers.map((number) => (
           <li key={number} className='page-item'>
-            <a onClick={() => paginate(number)} href='!#' className='page-link'>
+            <a onClick={() => {
+              paginate(number);
+            }} href='!#' className='page-link'>
                 {number}
             </a>
           </li>

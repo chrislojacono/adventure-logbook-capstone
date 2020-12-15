@@ -15,7 +15,7 @@ export default class SearchBox extends Component {
     maxDiff: '',
     minDiff: '',
     maxDist: '',
-    maxResults: '',
+    maxResults: 10,
     style: '',
     routes: [],
     success: false,
@@ -182,9 +182,7 @@ export default class SearchBox extends Component {
                   required
                 >
                   <option>Choose...</option>
-                  <option>5</option>
                   <option>10</option>
-                  <option>15</option>
                   <option>20</option>
                   <option>30</option>
                   <option>40</option>
