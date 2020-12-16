@@ -14,7 +14,6 @@ import ClimbDetails from '../Views/ClimbDetails';
 import getUid from '../../helpers/data/AuthData';
 import stock1 from '../../helpers/images/stock1.jpg';
 import stock2 from '../../helpers/images/stock2.jpg';
-import stock3 from '../../helpers/images/stock3.jpg';
 import stock4 from '../../helpers/images/stock4.jpg';
 import stock5 from '../../helpers/images/stock5.jpg';
 import stock6 from '../../helpers/images/stock6.jpg';
@@ -43,7 +42,7 @@ const useStyles = makeStyles({
 });
 
 export default function ClimbCard({ routeData }) {
-  const imageArray = [stock1, stock2, stock3, stock4, stock5, stock6, stock7, stock8, stock9, stock10, stock11, stock12, stock13, stock14, stock15, stock16, stock17, stock18, stock19, stock20];
+  const imageArray = [stock1, stock2, stock4, stock5, stock6, stock7, stock8, stock9, stock10, stock11, stock12, stock13, stock14, stock15, stock16, stock17, stock18, stock19, stock20];
 
   const getRandomImage = () => {
     const image = imageArray[Math.floor(Math.random() * imageArray.length)];
