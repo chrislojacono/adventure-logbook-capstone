@@ -19,6 +19,19 @@ import stock4 from '../../helpers/images/stock4.jpg';
 import stock5 from '../../helpers/images/stock5.jpg';
 import stock6 from '../../helpers/images/stock6.jpg';
 import stock7 from '../../helpers/images/stock7.jpg';
+import stock8 from '../../helpers/images/stock8.jpg';
+import stock9 from '../../helpers/images/stock9.jpg';
+import stock10 from '../../helpers/images/stock10.jpg';
+import stock11 from '../../helpers/images/stock11.jpg';
+import stock12 from '../../helpers/images/stock12.jpg';
+import stock13 from '../../helpers/images/stock13.jpg';
+import stock14 from '../../helpers/images/stock14.jpg';
+import stock15 from '../../helpers/images/stock15.jpg';
+import stock16 from '../../helpers/images/stock16.jpg';
+import stock17 from '../../helpers/images/stock17.jpg';
+import stock18 from '../../helpers/images/stock18.jpg';
+import stock19 from '../../helpers/images/stock19.png';
+import stock20 from '../../helpers/images/stock20.jpg';
 
 const useStyles = makeStyles({
   root: {
@@ -30,7 +43,7 @@ const useStyles = makeStyles({
 });
 
 export default function ClimbCard({ routeData }) {
-  const imageArray = [stock1, stock2, stock3, stock4, stock5, stock6, stock7];
+  const imageArray = [stock1, stock2, stock3, stock4, stock5, stock6, stock7, stock8, stock9, stock10, stock11, stock12, stock13, stock14, stock15, stock16, stock17, stock18, stock19, stock20];
 
   const getRandomImage = () => {
     const image = imageArray[Math.floor(Math.random() * imageArray.length)];
