@@ -108,6 +108,7 @@ export default class SearchBox extends Component {
       noRoutes,
     } = this.state;
 
+    // Logic to determine what routes are appearing on each page
     const indexOfLastRoute = this.state.currentPage * this.state.routesPerPage;
 
     const indexOfFirstRoute = indexOfLastRoute - this.state.routesPerPage;

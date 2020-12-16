@@ -29,7 +29,7 @@ export default function LogbookCard({ routeData, onUpdate, deleteCard }) {
   const classes = useStyles();
 
   return (
-    <List className={`${classes.root}`}>
+    <List className={`${classes.root} logbookCard`}>
       <ListItem alignItems='flex-start'>
         <ListItemAvatar>
           <Avatar alt='Climb Avatar' src={routeData.imageUrl} />
@@ -58,12 +58,15 @@ export default function LogbookCard({ routeData, onUpdate, deleteCard }) {
             </React.Fragment>
           }
         />
-        <CardActions className='buttonToDoContainer mt-3'>
+        <CardActions className='buttonToDoContainer mt-4'>
+          <a href={routeData.url} target='_blank' rel='noreferrer' className='mr-3 pt-1'>
+          <i class="fas fa-info-circle"></i>
+          </a>
         <AppModal
           className2={'logbookModal'}
           title={'Edit Log Entry'}
           buttonLabel={'Edit'}
-          btnColor={'info'}
+          btnColor={'outline-info'}
         >
           <LogbookForm logbookData={routeData} onUpdate={onUpdate} />
         </AppModal>
