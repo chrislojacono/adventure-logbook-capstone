@@ -10,7 +10,7 @@ import Typography from '@material-ui/core/Typography';
 import DeleteTwoToneIcon from '@material-ui/icons/DeleteTwoTone';
 import stock1 from '../../helpers/images/stock1.jpg';
 import stock2 from '../../helpers/images/stock2.jpg';
-import stock3 from '../../helpers/images/stock3.jpg';
+import stock8 from '../../helpers/images/stock8.jpg';
 import stock4 from '../../helpers/images/stock4.jpg';
 import stock5 from '../../helpers/images/stock5.jpg';
 import stock6 from '../../helpers/images/stock6.jpg';
@@ -35,7 +35,7 @@ export default function ToDoCard({
   user,
 }) {
   const classes = useStyles();
-  const imageArray = [stock1, stock2, stock3, stock4, stock5, stock6, stock7];
+  const imageArray = [stock1, stock2, stock8, stock4, stock5, stock6, stock7];
 
   const getRandomImage = () => {
     const image = imageArray[Math.floor(Math.random() * imageArray.length)];
