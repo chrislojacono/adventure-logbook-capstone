@@ -48,7 +48,7 @@ export default class LogbookForm extends Component {
         this.setState({ success: true });
         setTimeout(() => {
           this.props.toggle();
-        }, 3500);
+        }, 3000);
       });
     } else {
       updateLogbook(this.state).then(() => {
@@ -56,7 +56,7 @@ export default class LogbookForm extends Component {
         this.setState({ success: true });
         setTimeout(() => {
           this.props.toggle();
-        }, 3500);
+        }, 3000);
       });
     }
   };
