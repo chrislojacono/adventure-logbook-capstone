@@ -77,7 +77,7 @@ export default function LogbookCard({ routeData, onUpdate, deleteCard }) {
         </Button>
         </CardActions>
       </ListItem>
-      <Divider variant='inset' component='li' />
+      <Divider variant='middle' component='li' />
     </List>
   );
 }

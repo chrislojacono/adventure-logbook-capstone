@@ -44,11 +44,13 @@ export default function ToDoCard({
 
   return (
     <Card className={`${classes.root} m-2 toDoCard d-flex flex-column`}>
+      <a href={routeData.url} target='_blank' rel='noreferrer' className='anchors'>
       <CardActionArea>
         <CardMedia
           className={classes.media}
           image={routeData.imageUrl === '' ? getRandomImage() : routeData.imageUrl}
           title='Contemplative Reptile'
+          component='img'
         />
         <CardContent className='toDoBody'>
           <Typography gutterBottom variant='h5' component='h2'>
@@ -85,6 +87,7 @@ export default function ToDoCard({
           )}
         </CardContent>
       </CardActionArea>
+      </a>
       <CardActions className='buttonToDoContainer mt-auto'>
         <AppModal
           btnColor={'outline-success'}
@@ -95,7 +98,7 @@ export default function ToDoCard({
         </AppModal>
         <AppModal
           btnColor={'outline-info'}
-          title={'Weather/Info'}
+          title={`${routeData.name} ${routeData.grade}`}
           buttonLabel={'Details'}
           className2={'btn btn-md'}
         >
