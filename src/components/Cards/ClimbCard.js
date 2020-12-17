@@ -90,6 +90,7 @@ export default function ClimbCard({ routeData }) {
   return (
     <Card className={`${classes.root} m-2 toDoCard d-flex flex-column`}>
       {success ? <ClimbAddedToToDo routeData={routeData}/> : <></>}
+      <a href={routeData.url} target='_blank' rel='noreferrer' className='anchors'>
       <CardActionArea>
         <CardMedia
           className={classes.media}
@@ -97,6 +98,7 @@ export default function ClimbCard({ routeData }) {
             routeData.imgMedium === '' ? getRandomImage() : routeData.imgMedium
           }
           title='Contemplative Reptile'
+          component='img'
         />
         <CardContent className='toDoBody'>
           <Typography gutterBottom variant='h5' component='h2'>
@@ -143,13 +145,14 @@ export default function ClimbCard({ routeData }) {
           )}
         </CardContent>
       </CardActionArea>
+      </a>
       <CardActions className='buttonToDoContainer d-flex mt-auto justify-content-center'>
         <Button variant="contained" color="primary" onClick={() => {
           addEventClick();
         }}>Add Climb</Button>
         <AppModal
           btnColor={'outline-info'}
-          title={'Weather/Info'}
+          title={`${routeData.name} ${routeData.rating}`}
           buttonLabel={'Details'}
           className2={'btn btn-md'}
         >
