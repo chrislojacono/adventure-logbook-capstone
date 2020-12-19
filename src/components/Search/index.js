@@ -180,7 +180,7 @@ export default class SearchBox extends Component {
                       className='form-control form-control-lg m-1'
                       value={this.state.name}
                       onChange={this.handleChange}
-                      defaultValue='Choose...'
+                      defaultValue='30'
                       required
                     >
                       <option>Choose...</option>
@@ -199,7 +199,7 @@ export default class SearchBox extends Component {
                       name='maxDist'
                       value={this.state.name}
                       onChange={this.handleChange}
-                      defaultValue='Choose...'
+                      defaultValue='25 miles'
                       required
                     >
                       <option>Choose...</option>
@@ -221,7 +221,7 @@ export default class SearchBox extends Component {
                       className='form-control form-control-lg m-1'
                       value={this.state.name}
                       onChange={this.handleChange}
-                      defaultValue='Choose...'
+                      defaultValue='V0'
                       required
                     >
                       {style === 'Bouldering' ? (
@@ -275,7 +275,7 @@ export default class SearchBox extends Component {
                       className='form-control form-control-lg m-1'
                       value={this.state.name}
                       onChange={this.handleChange}
-                      defaultValue='Choose...'
+                      defaultValue='V15'
                       required
                     >
                       {style === 'Bouldering' ? (
