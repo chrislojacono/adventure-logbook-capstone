@@ -19,7 +19,8 @@ Rock Climbing is my passion, outside of web development, so I took this oppurtun
 [Adventure Logbook](https://adventure-logbook.netlify.app/) <br/>[![Netlify Status](https://api.netlify.com/api/v1/badges/0f5ae98c-20fe-4f8c-b3f0-aeb0fe5d4963/deploy-status)](https://app.netlify.com/sites/adventure-logbook/deploys)
 
 ## Screenshots
-![screencapture-localhost-3000-todo-2020-12-12-13_47_35](https://user-images.githubusercontent.com/66916708/101994007-99e1e500-3c84-11eb-85f5-e7becbd4f039.png)
+![screencapture-adventure-logbook-netlify-app-todo-2020-12-19-08_11_46](https://user-images.githubusercontent.com/66916708/102691403-e15ef880-41d1-11eb-9b1d-a73557405149.png)
+
 ![Screen Shot 2020-12-19 at 8 08 37 AM](https://user-images.githubusercontent.com/66916708/102691353-74e3f980-41d1-11eb-8f59-f6e4e6617850.png)
 
 ## ERD
