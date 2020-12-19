@@ -1,5 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
+import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import Divider from '@material-ui/core/Divider';
 import ListItemText from '@material-ui/core/ListItemText';
@@ -11,7 +12,7 @@ import Stars from 'simple-rating-stars';
 const useStyles = makeStyles((theme) => ({
   root: {
     width: '100%',
-    maxWidth: '36ch',
+    maxWidth: '55ch',
     backgroundColor: theme.palette.background.paper,
   },
   inline: {
@@ -23,7 +24,7 @@ export default function CommentCard({ data }) {
   const classes = useStyles();
 
   return (
-    <>
+    <List className={`${classes.root} commentCard`}>
       <ListItem alignItems='flex-start'>
         <ListItemAvatar>
           <Avatar alt='Remy Sharp' src={data.userImage} />
@@ -54,6 +55,6 @@ export default function CommentCard({ data }) {
         />
       </ListItem>
       <Divider variant='inset' component='li' />
-    </>
+    </List>
   );
 }
