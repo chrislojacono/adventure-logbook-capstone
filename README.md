@@ -20,10 +20,10 @@ Rock Climbing is my passion, outside of web development, so I took this oppurtun
 
 ## Screenshots
 ![screencapture-localhost-3000-todo-2020-12-12-13_47_35](https://user-images.githubusercontent.com/66916708/101994007-99e1e500-3c84-11eb-85f5-e7becbd4f039.png)
-![Screen Shot 2020-12-12 at 2 18 02 PM](https://user-images.githubusercontent.com/66916708/101994046-e0374400-3c84-11eb-8528-0b83f68426df.png)
+![Screen Shot 2020-12-19 at 8 08 37 AM](https://user-images.githubusercontent.com/66916708/102691353-74e3f980-41d1-11eb-8f59-f6e4e6617850.png)
 
 ## ERD
-![Screen Shot 2020-12-12 at 8 21 29 PM](https://user-images.githubusercontent.com/66916708/102001420-a92e5600-3cb7-11eb-8095-a07db02ecfc8.png)
+![Screen Shot 2020-12-14 at 9 31 46 PM](https://user-images.githubusercontent.com/66916708/102691352-744b6300-41d1-11eb-82ed-0d6fec0e4aa8.png)
 
 ## Code Snippet
 My Cards that display post-search using hooks and material UI
