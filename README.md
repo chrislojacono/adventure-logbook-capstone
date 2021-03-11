@@ -18,6 +18,9 @@ Rock Climbing is my passion, outside of web development, so I took this oppurtun
 ## Deployed Site
 [Adventure Logbook](https://adventure-logbook.netlify.app/) <br/>[![Netlify Status](https://api.netlify.com/api/v1/badges/0f5ae98c-20fe-4f8c-b3f0-aeb0fe5d4963/deploy-status)](https://app.netlify.com/sites/adventure-logbook/deploys)
 
+## Walk Through
+[Walk Through Video](https://www.loom.com/share/9985f882d5384f3a811d9ee32d425694?sharedAppSource=personal_library)
+
 ## Screenshots
 ![screencapture-adventure-logbook-netlify-app-todo-2020-12-19-08_11_46](https://user-images.githubusercontent.com/66916708/102691403-e15ef880-41d1-11eb-9b1d-a73557405149.png)
 
@@ -152,9 +155,6 @@ export default function ClimbCard({ routeData }) {
 }
 ```
 
-
-## Loom Video
-[My Overview of the project planning](https://www.loom.com/share/0574a09eaec242f3821c712b15bbd349)
 
 ## Wireframe
 [Figma Wireframe](https://www.figma.com/file/AKMpFD8OXHPdk5E5DRpWBj/Adventure-Logbook-Front-End-Capstone?node-id=12%3A4017)
