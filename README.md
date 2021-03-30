@@ -157,4 +157,3 @@ export default function ClimbCard({ routeData }) {
 
 ## Wireframe
 [Figma Wireframe](https://www.figma.com/file/AKMpFD8OXHPdk5E5DRpWBj/Adventure-Logbook-Front-End-Capstone?node-id=12%3A4017)
-
