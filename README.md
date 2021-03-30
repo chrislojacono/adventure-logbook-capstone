@@ -1,6 +1,6 @@
 # The Adventure Logbook
 ![AdventureLogbookLogo](https://user-images.githubusercontent.com/66916708/101431299-35153c00-38cc-11eb-9dac-6155df5d3bd9.png)
-This is my capstone project for my front-end development semester at The Nashville Software School. It is a single page application for the user to find the best quality rock climbs in any area, store them in their To-Do List and then add them to their Logbook once they have completed them. It shows weather in the area of the climb and if any other user has logged it their comments will appear in the details modal. 
+This is my capstone project for my front-end development semester at The Nashville Software School. It is a single page application for the user to find the best quality rock climbs in any area, store them in their To-Do List and then add them to their Logbook once they have completed them. It shows weather in the area of the climb and if any other user has logged it their comments will appear in the details modal
 
 ## The Motivation
 Rock Climbing is my passion, outside of web development, so I took this oppurtunity to build an application I could use to keep track of climbs that I would like to do in the future, and store the ones from the past. I always found it difficult to find crags near an area I was traveling without doing lots of research, so this app makes all the planning easier.
